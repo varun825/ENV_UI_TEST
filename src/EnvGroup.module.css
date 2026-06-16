@@ -1,0 +1,51 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--border-hi); }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+.badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: var(--border);
+  color: var(--muted);
+}
+
+/* Color accent on left border per group type */
+.card.accent  { border-left: 3px solid var(--accent); }
+.card.warn    { border-left: 3px solid var(--warn); }
+.card.info    { border-left: 3px solid var(--info); }
+.card.danger  { border-left: 3px solid var(--danger); }
+
+.rows { padding: 4px 0; }

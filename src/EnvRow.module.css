@@ -1,0 +1,90 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: rgba(255,255,255,0.025); }
+.row.empty { opacity: 0.45; }
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 140px;
+}
+
+.label {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.key {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.valueWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.value {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 340px;
+  flex: 1;
+  text-align: right;
+}
+
+.value.hidden {
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.btn {
+  background: var(--border);
+  border: 1px solid var(--border-hi);
+  color: var(--muted);
+  border-radius: 5px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.btn:hover:not(:disabled) {
+  background: var(--border-hi);
+  color: var(--text);
+}
+.btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.btn.copied {
+  background: var(--accent-md);
+  border-color: var(--accent);
+  color: var(--accent);
+}

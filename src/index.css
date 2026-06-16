@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0d0f14;
+  --surface:   #13161e;
+  --card:      #1a1e29;
+  --border:    #252a38;
+  --border-hi: #2e3547;
+
+  --text:      #e8eaf0;
+  --muted:     #6b7394;
+  --dim:       #3d4460;
+
+  --accent:    #4ade80;       /* green — "live / active" */
+  --accent-lo: rgba(74,222,128,0.08);
+  --accent-md: rgba(74,222,128,0.18);
+
+  --warn:      #fb923c;
+  --warn-lo:   rgba(251,146,60,0.10);
+
+  --info:      #60a5fa;
+  --info-lo:   rgba(96,165,250,0.10);
+
+  --danger:    #f87171;
+  --danger-lo: rgba(248,113,113,0.10);
+
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+
+  --radius:  8px;
+  --radius-lg: 14px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 99px; }
